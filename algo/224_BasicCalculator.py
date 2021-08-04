@@ -1,7 +1,7 @@
 class Solution:
     def calculate(self, s):
         """
-        source: https://leetcode.com/problems/basic-calculator/discuss/62424/Python-concise-solution-with-stack.
+        source: https://leetcode.com/problems/basic-calculator/discuss/62424/Python-concise-solution-with-stack
         """
         total = 0  # 目前總值
         num = 0  # 數字 e.g. 20, 36,...
