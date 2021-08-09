@@ -17,11 +17,11 @@ class Solution:
         # recursive case
         else:
             n = len(lists) // 2
-            left_sorted = self.mergeKLists(lists[:n])
-            right_sorted = self.mergeKLists(lists[n:])
-            combine_result = self.merge([left_sorted, right_sorted])
+            left = self.mergeKLists(lists[:n])
+            right = self.mergeKLists(lists[n:])
+            result = self.merge([left, right])
 
-            return combine_result
+            return result
 
     def merge(self, lists):
         ans = []
@@ -47,13 +47,13 @@ class Solution:
             return None
 
         last_val = None
-        output = ListNode()
+        result = ListNode()
         for i in ans[::-1]:
-            output.val = i
-            output.next = last_val
+            result.val = i
+            result.next = last_val
             last_val = ListNode(i, last_val)
 
-        return output
+        return result
 
     def mergeKLists2(self, lists):
         """
@@ -81,7 +81,7 @@ class Solution:
         if ans == []:
             return ListNode("", None)
 
-        # output
+        # result
         return_ans = ListNode()
         next_val = None
         for i in ans[::-1]:
